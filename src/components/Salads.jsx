@@ -33,10 +33,18 @@ const Salads = () => {
         <Splide
           options={{
             perPage: 3,
-            arrows: false,
+            breakpoints: {
+              640: {
+                perPage: 1,
+              },
+              1024: {
+                perPage: 2,
+              },
+            },
+            arrows: true,
             pagination: false,
             drag: "free",
-            gap: "5rem",
+            gap: "1rem",
           }}>
           {salads.map((recipe) => {
             return (

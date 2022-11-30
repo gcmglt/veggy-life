@@ -45,18 +45,21 @@ const StyledLink = styled(NavLink)`
   height: 6rem;
   cursor: pointer;
   transform: scale(0.8);
-
   h4 {
     color: white;
-    font-size; 0.8rem;
+    font-size: 0.8rem;
   }
   svg {
     color: white;
     font-size: 1.5rem;
-
   }
   &.active {
     background: linear-gradient(to right, #f27121, #e94057);
+  }
+  @media (max-width: 520px) {
+    width: 100px;
+    height: 80px;
+    margin: 0 auto;
   }
 `;
 

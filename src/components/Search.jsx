@@ -27,7 +27,7 @@ const Search = () => {
 };
 
 const FormStyle = styled.form`
-  margin: 1rem 10rem;
+  margin: 0 10rem;
   div {
     width: 100%;
     position: relative;
@@ -49,6 +49,10 @@ const FormStyle = styled.form`
     left: 0%;
     transform: translate(100%, -50%);
     color: white;
+  }
+  @media (max-width: 520px) {
+    width: 266px;
+    margin: 0 auto;
   }
 `;
 

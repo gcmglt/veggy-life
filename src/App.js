@@ -1,6 +1,7 @@
 import Pages from "./pages/Pages";
 import Search from "./components/Search";
 import Categories from "./components/Categories";
+import Footer from "./components/Footer";
 
 import styled from "styled-components";
 import { BrowserRouter, Link } from "react-router-dom";
@@ -17,6 +18,7 @@ const App = () => {
         <Search />
         <Categories />
         <Pages />
+        <Footer />
       </BrowserRouter>
     </div>
   );
@@ -30,7 +32,7 @@ const Logo = styled(Link)`
 `;
 
 const Nav = styled.div`
-  padding: 4rem 0rem;
+  padding: 2rem 0rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;

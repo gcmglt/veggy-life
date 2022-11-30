@@ -33,10 +33,21 @@ const Desserts = () => {
         <Splide
           options={{
             perPage: 4,
-            arrows: false,
+            breakpoints: {
+              640: {
+                perPage: 1,
+              },
+              1024: {
+                perPage: 2,
+              },
+              1440: {
+                perPage: 3,
+              },
+            },
+            arrows: true,
             pagination: false,
             drag: "free",
-            gap: "5rem",
+            gap: "1rem",
           }}>
           {desserts.map((recipe) => {
             return (
