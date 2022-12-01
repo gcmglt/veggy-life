@@ -53,6 +53,7 @@ const Card = styled.div`
   img {
     width: 100%;
     border-radius: 2rem;
+    border: 3px solid #39393a;
   }
   a {
     text-decoration: none;

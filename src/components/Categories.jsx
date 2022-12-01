@@ -12,7 +12,7 @@ const Categories = () => {
       </StyledLink>
       <StyledLink to={"/dishes/bread"}>
         <GiSandwich />
-        <h4>Bread</h4>
+        <h4>Breads</h4>
       </StyledLink>
       <StyledLink to={"/dishes/dessert"}>
         <GiCupcake />
@@ -40,7 +40,7 @@ const StyledLink = styled(NavLink)`
   border-radius: 50%;
   margin-right: 2rem;
   text-decoration: none;
-  background: linear-gradient(35deg, #494949, #313131);
+  background: linear-gradient(35deg, #93938a, #39393a);
   width: 6rem;
   height: 6rem;
   cursor: pointer;
@@ -54,11 +54,11 @@ const StyledLink = styled(NavLink)`
     font-size: 1.5rem;
   }
   &.active {
-    background: linear-gradient(to right, #f27121, #e94057);
+    background: linear-gradient(to right, #a4cba9, #37584b);
   }
-  @media (max-width: 520px) {
-    width: 100px;
-    height: 80px;
+  @media (max-width: 768px) {
+    width: 5rem;
+    height: 5rem;
     margin: 0 auto;
   }
 `;

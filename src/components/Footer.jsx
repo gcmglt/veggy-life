@@ -14,6 +14,7 @@ const Footer = () => {
 const Rights = styled.div`
   margin: 3rem 0rem;
   text-align: center;
+  color: #93938a;
 `;
 
 export default Footer;

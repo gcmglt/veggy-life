@@ -1,4 +1,4 @@
-import Desserts from "../components/Desserts";
+import Trending from "../components/Trending";
 import Salads from "../components/Salads";
 
 import { motion } from "framer-motion";
@@ -10,8 +10,8 @@ const Home = () => {
       initial={{ opacity: 0 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}>
+      <Trending />
       <Salads />
-      <Desserts />
     </motion.div>
   );
 };

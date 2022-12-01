@@ -36,7 +36,7 @@ const FormStyle = styled.form`
     border: none;
     background: linear-gradient(35deg, #494949, #313131);
     font-size: 1.5rem;
-    color: white;
+    color: #a4cba9;
     padding: 1rem 3rem;
     border: none;
     border-radius: 1rem;
@@ -50,7 +50,7 @@ const FormStyle = styled.form`
     transform: translate(100%, -50%);
     color: white;
   }
-  @media (max-width: 520px) {
+  @media (max-width: 768px) {
     width: 266px;
     margin: 0 auto;
   }

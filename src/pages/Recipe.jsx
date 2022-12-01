@@ -67,6 +67,7 @@ const Recipe = () => {
 
 const DetailsWrapper = styled.div`
   display: flex;
+  flex-direction: row;
   margin-top: 5rem;
   margin-bottom: 5rem;
   .active {
@@ -75,23 +76,46 @@ const DetailsWrapper = styled.div`
   }
   h2 {
     margin-bottom: 2rem;
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 0.9rem;
+    line-height: 2rem;
   }
   li {
-    font-size: 1.2rem;
-    line-height: 2.5rem;
+    font-size: 0.9rem;
+    line-height: 2rem;
   }
   ul {
     margin-top: 2rem;
+    margin-left: 1rem;
+  }
+  img {
+    width: 21rem;
+    border: 3px solid #39393a;
+  }
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
   }
 `;
 
 const Button = styled.button`
-  padding: 1rem 2rem;
   color: #313131;
   background: white;
   border: 2px solid black;
+  margin-top: 2rem;
   margin-right: 2rem;
   font-weight: 600;
+  width: 150px;
+  height: 52px;
+  text-align: center;
+  @media (max-width: 560px) {
+    width: 110px;
+    height: 35px;
+    font-size: 0.8rem;
+    padding: 0;
+  }
 `;
 
 const Info = styled.div`

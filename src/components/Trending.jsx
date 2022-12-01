@@ -4,32 +4,32 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import "@splidejs/splide/dist/css/splide.min.css";
 
-const Desserts = () => {
-  const [desserts, setDesserts] = useState([]);
+const Trending = () => {
+  const [trending, setTrending] = useState([]);
 
   useEffect(() => {
-    getDesserts();
+    getTrending();
   }, []);
 
-  const getDesserts = async () => {
-    const check = localStorage.getItem("desserts");
+  const getTrending = async () => {
+    const check = localStorage.getItem("italian");
     if (check) {
-      setDesserts(JSON.parse(check));
+      setTrending(JSON.parse(check));
     } else {
       const api = await fetch(
-        `https://api.spoonacular.com/recipes/random?number=9&diet=vegetarian&tags=dessert&apiKey=${process.env.REACT_APP_API_KEY}`
+        `https://api.spoonacular.com/recipes/random?number=12&tags=vegetarian&apiKey=${process.env.REACT_APP_API_KEY}`
       );
       const data = await api.json();
 
-      localStorage.setItem("desserts", JSON.stringify(data.recipes));
-      setDesserts(data.recipes);
+      localStorage.setItem("trending", JSON.stringify(data.recipes));
+      setTrending(data.recipes);
     }
   };
 
   return (
     <div>
       <Wrapper>
-        <h3>Trending Veggie Desserts</h3>
+        <h3>Trending Recipes From Our Community</h3>
         <Splide
           options={{
             perPage: 4,
@@ -49,7 +49,7 @@ const Desserts = () => {
             drag: "free",
             gap: "1rem",
           }}>
-          {desserts.map((recipe) => {
+          {trending.map((recipe) => {
             return (
               <SplideSlide key={recipe.id}>
                 <Card>
@@ -83,6 +83,7 @@ const Card = styled.div`
 
   img {
     border-radius: 2rem;
+    border: 3px solid #39393a;
     position: absolute;
     left: 0;
     width: 100%;
@@ -115,4 +116,4 @@ const Gradient = styled.div`
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
 `;
 
-export default Desserts;
+export default Trending;

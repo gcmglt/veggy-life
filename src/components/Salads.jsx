@@ -17,7 +17,7 @@ const Salads = () => {
       setSalads(JSON.parse(check));
     } else {
       const api = await fetch(
-        `https://api.spoonacular.com/recipes/random?number=9&diet=vegetarian&type=salad&apiKey=${process.env.REACT_APP_API_KEY}`
+        `https://api.spoonacular.com/recipes/random?number=12&tags=vegetarian,salad&apiKey=${process.env.REACT_APP_API_KEY}`
       );
       const data = await api.json();
 
@@ -29,7 +29,7 @@ const Salads = () => {
   return (
     <div>
       <Wrapper>
-        <h3>Trending Veggie Salads</h3>
+        <h3>Veggie Salads That You Must Try!</h3>
         <Splide
           options={{
             perPage: 3,
@@ -80,6 +80,7 @@ const Card = styled.div`
 
   img {
     border-radius: 2rem;
+    border: 3px solid #39393a;
     position: absolute;
     left: 0;
     width: 100%;
